@@ -5,8 +5,6 @@ An end-to-end classification project implementing a Decision Tree Classifier to 
 ## 📌 Project Overview
 Direct marketing campaigns are resource-intensive. This project builds a predictive machine learning pipeline using demographic (age, job, marital status, education) and behavioral (balance, previous contact, loan history) data to target customers most likely to subscribe to a term deposit, optimizing outreach strategy and conversion rates.
 
-![Decision Tree Classifier Performance and EDA](./TASK_03.png)
-
 ## 🚀 Key Features
 * **Machine Learning Pipeline:** Builds, trains, and evaluates a Decision Tree Classifier using Scikit-Learn.
 * **Pre-modeling Data Processing:** Conducts data cleaning, handles outliers in financial balances, and performs categorical encoding (via `LabelEncoder`).
@@ -40,10 +38,9 @@ Direct marketing campaigns are resource-intensive. This project builds a predict
 
 ## 📂 Project Structure
 ```text
-├── Task_03.ipynb   # Model building, evaluation, and EDA notebook
-├── bank.csv        # UCI bank marketing campaign dataset
-├── TASK_03.png     # Decision tree visualization and performance plots
-└── README.md       # Project documentation
+├── Task_03.ipynb                           # Model building, evaluation, and EDA notebook
+├── bank.csv                                 # UCI bank marketing campaign dataset
+└── README.md                                # Project documentation
 ```
 
 ## 👤 Author
