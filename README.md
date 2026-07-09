@@ -1,45 +1,52 @@
-# Prodigy InfoTech Data Science Internship Task 3
+# Bank Term Deposit Subscription Predictor
 
-Build a decision tree classifier to predict whether a customer will purchase a product or service based on their demographic and behavioral data. The dataset used is the Bank Marketing dataset from the UCI Machine Learning Repository.
+An end-to-end classification project implementing a Decision Tree Classifier to predict client purchase behavior (term deposit subscriptions) for a retail bank's telemarketing campaigns.
 
-### Task Completed
+## 📌 Project Overview
+Direct marketing campaigns are resource-intensive. This project builds a predictive machine learning pipeline using demographic (age, job, marital status, education) and behavioral (balance, previous contact, loan history) data to target customers most likely to subscribe to a term deposit, optimizing outreach strategy and conversion rates.
 
-This submission fulfills the requirements of Task 3, which was to build and evaluate a decision tree classifier model. The model predicts whether a customer will subscribe to a term deposit based on their demographic and behavioral data.
+![Decision Tree Classifier Performance and EDA](./TASK_03.png)
 
-### Methodology:
+## 🚀 Key Features
+* **Machine Learning Pipeline:** Builds, trains, and evaluates a Decision Tree Classifier using Scikit-Learn.
+* **Pre-modeling Data Processing:** Conducts data cleaning, handles outliers in financial balances, and performs categorical encoding (via `LabelEncoder`).
+* **Feature Relationship Mapping:** Explores multicollinearity and feature interactions using heatmaps, box plots, and continuous distributions.
+* **Decision Tree Visualization:** Plots the trained classification tree to demonstrate feature splits and model transparency.
 
-- **Data Acquisition:** Obtained the Bank Marketing dataset from the [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/Bank+Marketing).
-- **Data Cleaning:** Prepared the data by handling missing values and ensuring data integrity.
-- **Encoding Categorical Variables:** Used `LabelEncoder` from `sklearn.preprocessing` to encode categorical variables.
-- **Feature Selection:** Selected relevant features for the decision tree model based on their significance.
-- **Model Building:** Built and trained a decision tree classifier using the cleaned and encoded dataset.
-- **Model Evaluation:** Assessed the performance of the model using metrics such as accuracy, precision, recall, and F1-score.
+## 🛠️ Tech Stack & Libraries
+* **Language:** Python
+* **Data Processing & EDA:** Pandas, NumPy, Seaborn, Matplotlib
+* **Machine Learning:** Scikit-Learn (Decision Tree Classifier, Train-Test Split, Classification Metrics, LabelEncoder)
 
-### Visualizations:
+## 📈 Methodology & Pipeline
+1. **Data Acquisition:** Sourced campaign history records from the [UCI Machine Learning Repository - Bank Marketing Dataset](https://archive.ics.uci.edu/ml/datasets/Bank+Marketing).
+2. **Exploratory Data Analysis (EDA):**
+   * Plotted correlation heatmaps for numeric variables.
+   * Investigated outlier profiles in variables like `balance` and `duration` using box plots.
+   * Visualized class distribution of the target variable (`y`) using count plots.
+3. **Data Preprocessing & Feature Engineering:**
+   * Handled categorical text columns through label encoding to make them suitable for tree splits.
+   * Split data into stratified training and testing subsets (typically an 80/20 partition).
+4. **Model Architecture & Training:**
+   * Instantiated and trained a `DecisionTreeClassifier` with regularized depth control to prevent overfitting.
+5. **Model Evaluation:**
+   * Measured prediction accuracy, precision, recall, and F1-score.
+   * Rendered the graphical tree map to examine the critical decision-making nodes.
 
-- **Heatmap of Correlations:** Visualized highly correlated numeric features using a heatmap. This helped in understanding the relationships between different features and identifying any multicollinearity issues.
+## 💡 Key Insights
+* **Primary Predictor (Call Duration):** The duration of the last contact call (`duration`) is a powerful predictor of subscription success; longer calls correlate highly with conversion.
+* **Outlier Dynamics:** Financial attributes like yearly average bank balances show high variance and extreme outliers, requiring robust split thresholds within the decision tree.
+* **Model Explainability:** The visualized decision tree indicates that prior campaign success and contact duration form the initial classification boundaries.
 
-- **Box Plots:** Created box plots for numeric features to visualize their distribution and detect outliers. Box plots provided insights into the central tendency, spread, and any anomalies in the numeric features.
+## 📂 Project Structure
+```text
+├── Task_03.ipynb   # Model building, evaluation, and EDA notebook
+├── bank.csv        # UCI bank marketing campaign dataset
+├── TASK_03.png     # Decision tree visualization and performance plots
+└── README.md       # Project documentation
+```
 
-- **Count Plots:** Generated count plots for categorical features to show the frequency distribution of each category. This visualization was useful for understanding the distribution of different categories within the dataset.
-
-- **Histograms:** Created histograms for numeric features to understand their distribution. Histograms revealed the underlying frequency distribution of the numeric variables.
-
-- **Decision Tree Plot:** Visualized the decision tree structure to understand how decisions are made based on different features.
-
-### Tools and Libraries:
-
-- Python
-- Pandas
-- Scikit-learn
-- Matplotlib
-- Seaborn
-
-### Dataset Source:
-
-- The dataset used for this analysis can be found at: [UCI Machine Learning Repository - Bank Marketing](https://archive.ics.uci.edu/ml/datasets/Bank+Marketing).
-
-### Contact
-
-- [Khan Sohail (LinkedIn)](https://www.linkedin.com/in/khan-sohail-386b2027a)
-- Gmail: ks646397@gmail.com
+## 👤 Author
+* **Khan Sohail**
+  * [LinkedIn](https://www.linkedin.com/in/khan-sohail-386b2027a)
+  * Email: ks646397@gmail.com
